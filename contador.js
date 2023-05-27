@@ -240,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let dam10k6569 = [];
   let dam10km70 = [];
 
+  
   let revision = [];
   let duplicados = [];
 
@@ -268,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         llegadaCompetidor = Object.assign({}, competidor); // Clonar el objeto competidor
-        console.log(llegadaCompetidor);
+        console.log(llegadaCompetidor)
 
         //Calcular la diferencia de tiempo en segundos
         const tiempoInicialSegundos =
@@ -306,368 +307,368 @@ document.addEventListener("DOMContentLoaded", function () {
         llegadaCompetidor.tiempoMinutos = difMinutos;
         llegadaCompetidor.tiempoSegundos = difSegundos;
 
-        verificarDuplicados(dorsalCompetidor, ingresos);
-        // ingresos.push(llegadaCompetidor);
+        ingresos.push(llegadaCompetidor);
         if (llegadaCompetidor.competencia === "21") {
-          verificarDuplicados(dorsalCompetidor,general21k);
+          general21k.push(llegadaCompetidor);
           llegadaCompetidor.posGeneral = general21k.length;
           calculosCompetidores(general21k);
           if (llegadaCompetidor.genero === "Masc") {
-            verificarDuplicados(dorsalCompetidor,caballeros21k);
+            caballeros21k.push(llegadaCompetidor);
             llegadaCompetidor.posSexo = caballeros21k.length;
             calculosCompetidores(caballeros21k);
 
             if (llegadaCompetidor.edad < 20) {
-              verificarDuplicados(dorsalCompetidor,cab21kh19);
+              cab21kh19.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21kh19.length;
               calculosCompetidores(cab21kh19);
             } else if (
               llegadaCompetidor.edad >= 20 &&
               llegadaCompetidor.edad <= 24
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k2024);
+              cab21k2024.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k2024.length;
               calculosCompetidores(cab21k2024);
             } else if (
               llegadaCompetidor.edad >= 25 &&
               llegadaCompetidor.edad <= 29
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k2529);
+              cab21k2529.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k2529.length;
               calculosCompetidores(cab21k2529);
             } else if (
               llegadaCompetidor.edad >= 30 &&
               llegadaCompetidor.edad <= 34
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k3034);
+              cab21k3034.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k3034.length;
               calculosCompetidores(cab21k3034);
             } else if (
               llegadaCompetidor.edad >= 35 &&
               llegadaCompetidor.edad <= 39
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k3539);
+              cab21k3539.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k3539.length;
               calculosCompetidores(cab21k3539);
             } else if (
               llegadaCompetidor.edad >= 40 &&
               llegadaCompetidor.edad <= 44
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k4044);
+              cab21k4044.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k4044.length;
               calculosCompetidores(cab21k4044);
             } else if (
               llegadaCompetidor.edad >= 45 &&
               llegadaCompetidor.edad <= 49
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k4549);
+              cab21k4549.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k4549.length;
               calculosCompetidores(cab21k4549);
             } else if (
               llegadaCompetidor.edad >= 50 &&
               llegadaCompetidor.edad <= 54
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k5054);
+              cab21k5054.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k5054.length;
               calculosCompetidores(cab21k5054);
             } else if (
               llegadaCompetidor.edad >= 55 &&
               llegadaCompetidor.edad <= 59
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k5559);
+              cab21k5559.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k5559.length;
               calculosCompetidores(cab21k5559);
             } else if (
               llegadaCompetidor.edad >= 60 &&
               llegadaCompetidor.edad <= 64
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k6064);
+              cab21k6064.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k6064.length;
               calculosCompetidores(cab21k6064);
             } else if (
               llegadaCompetidor.edad >= 65 &&
               llegadaCompetidor.edad <= 69
             ) {
-              verificarDuplicados(dorsalCompetidor,cab21k6569);
+              cab21k6569.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21k6569.length;
               calculosCompetidores(cab21k6569);
             } else if (llegadaCompetidor.edad >= 70) {
-              verificarDuplicados(dorsalCompetidor,cab21km70);
+              cab21km70.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab21km70.length;
               calculosCompetidores(cab21km70);
             }
           }
           if (llegadaCompetidor.genero === "Fem") {
-            verificarDuplicados(dorsalCompetidor,damas21k);
+            damas21k.push(llegadaCompetidor);
             llegadaCompetidor.posSexo = damas21k.length;
             calculosCompetidores(damas21k);
 
             if (llegadaCompetidor.edad < 20) {
-              verificarDuplicados(dorsalCompetidor,dam21kh19);
+              dam21kh19.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21kh19.length;
               calculosCompetidores(dam21kh19);
             } else if (
               llegadaCompetidor.edad >= 20 &&
               llegadaCompetidor.edad <= 24
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k2024);
+              dam21k2024.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k2024.length;
               calculosCompetidores(dam21k2024);
             } else if (
               llegadaCompetidor.edad >= 25 &&
               llegadaCompetidor.edad <= 29
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k2529);
+              dam21k2529.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k2529.length;
               calculosCompetidores(dam21k2529);
             } else if (
               llegadaCompetidor.edad >= 30 &&
               llegadaCompetidor.edad <= 34
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k3034);
+              dam21k3034.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k3034.length;
               calculosCompetidores(dam21k3034);
             } else if (
               llegadaCompetidor.edad >= 35 &&
               llegadaCompetidor.edad <= 39
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k3539);
+              dam21k3539.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k3539.length;
               calculosCompetidores(dam21k3539);
             } else if (
               llegadaCompetidor.edad >= 40 &&
               llegadaCompetidor.edad <= 44
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k4044);
+              dam21k4044.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k4044.length;
               calculosCompetidores(dam21k4044);
             } else if (
               llegadaCompetidor.edad >= 45 &&
               llegadaCompetidor.edad <= 49
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k4549);
+              dam21k4549.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k4549.length;
               calculosCompetidores(dam21k4549);
             } else if (
               llegadaCompetidor.edad >= 50 &&
               llegadaCompetidor.edad <= 54
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k5054);
+              dam21k5054.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k5054.length;
               calculosCompetidores(dam21k5054);
             } else if (
               llegadaCompetidor.edad >= 55 &&
               llegadaCompetidor.edad <= 59
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k5559);
+              dam21k5559.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k5559.length;
               calculosCompetidores(dam21k5559);
             } else if (
               llegadaCompetidor.edad >= 60 &&
               llegadaCompetidor.edad <= 64
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k6064);
+              dam21k6064.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k6064.length;
               calculosCompetidores(dam21k6064);
             } else if (
               llegadaCompetidor.edad >= 65 &&
               llegadaCompetidor.edad <= 69
             ) {
-              verificarDuplicados(dorsalCompetidor,dam21k6569);
+              dam21k6569.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21k6569.length;
               calculosCompetidores(dam21k6569);
             } else if (llegadaCompetidor.edad >= 70) {
-              verificarDuplicados(dorsalCompetidor,dam21km70);
+              dam21km70.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam21km70.length;
               calculosCompetidores(dam21km70);
             }
           }
         }
         if (llegadaCompetidor.competencia === "10") {
-          verificarDuplicados(dorsalCompetidor,general10k);
+          general10k.push(llegadaCompetidor);
           llegadaCompetidor.posGeneral = general10k.length;
           calculosCompetidores(general10k);
 
           if (llegadaCompetidor.genero === "Masc") {
-            verificarDuplicados(dorsalCompetidor,caballeros10k);
+            caballeros10k.push(llegadaCompetidor);
             llegadaCompetidor.posSexo = caballeros10k.length;
             calculosCompetidores(caballeros10k);
 
             if (llegadaCompetidor.edad < 20) {
-              verificarDuplicados(dorsalCompetidor,cab10kh19);
+              cab10kh19.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10kh19.length;
               calculosCompetidores(cab10kh19);
             } else if (
               llegadaCompetidor.edad >= 20 &&
               llegadaCompetidor.edad <= 24
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k2024);
+              cab10k2024.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k2024.length;
               calculosCompetidores(cab10k2024);
             } else if (
               llegadaCompetidor.edad >= 25 &&
               llegadaCompetidor.edad <= 29
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k2529);
+              cab10k2529.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k2529.length;
               calculosCompetidores(cab10k2529);
             } else if (
               llegadaCompetidor.edad >= 30 &&
               llegadaCompetidor.edad <= 34
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k3034);
+              cab10k3034.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k3034.length;
               calculosCompetidores(cab10k3034);
             } else if (
               llegadaCompetidor.edad >= 35 &&
               llegadaCompetidor.edad <= 39
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k3539);
+              cab10k3539.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k3539.length;
               calculosCompetidores(cab10k3539);
             } else if (
               llegadaCompetidor.edad >= 40 &&
               llegadaCompetidor.edad <= 44
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k4044);
+              cab10k4044.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k4044.length;
               calculosCompetidores(cab10k4044);
             } else if (
               llegadaCompetidor.edad >= 45 &&
               llegadaCompetidor.edad <= 49
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k4549);
+              cab10k4549.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k4549.length;
               calculosCompetidores(cab10k4549);
             } else if (
               llegadaCompetidor.edad >= 50 &&
               llegadaCompetidor.edad <= 54
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k5054);
+              cab10k5054.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k5054.length;
               calculosCompetidores(cab10k5054);
             } else if (
               llegadaCompetidor.edad >= 55 &&
               llegadaCompetidor.edad <= 59
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k5559);
+              cab10k5559.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k5559.length;
               calculosCompetidores(cab10k5559);
             } else if (
               llegadaCompetidor.edad >= 60 &&
               llegadaCompetidor.edad <= 64
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k6064);
+              cab10k6064.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k6064.length;
               calculosCompetidores(cab10k6064);
             } else if (
               llegadaCompetidor.edad >= 65 &&
               llegadaCompetidor.edad <= 69
             ) {
-              verificarDuplicados(dorsalCompetidor,cab10k6569);
+              cab10k6569.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10k6569.length;
               calculosCompetidores(cab10k6569);
             } else if (llegadaCompetidor.edad >= 70) {
-              verificarDuplicados(dorsalCompetidor,cab10km70);
+              cab10km70.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = cab10km70.length;
               calculosCompetidores(cab10km70);
             }
           }
           if (llegadaCompetidor.genero === "Fem") {
-            verificarDuplicados(dorsalCompetidor,damas10k);
+            damas10k.push(llegadaCompetidor);
             llegadaCompetidor.posSexo = damas10k.length;
             calculosCompetidores(damas10k);
 
             if (llegadaCompetidor.edad < 20) {
-              verificarDuplicados(dorsalCompetidor,dam10kh19);
+              dam10kh19.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10kh19.length;
               calculosCompetidores(dam10kh19);
             } else if (
               llegadaCompetidor.edad >= 20 &&
               llegadaCompetidor.edad <= 24
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k2024);
+              dam10k2024.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k2024.length;
               calculosCompetidores(dam10k2024);
             } else if (
               llegadaCompetidor.edad >= 25 &&
               llegadaCompetidor.edad <= 29
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k2529);
+              dam10k2529.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k2529.length;
               calculosCompetidores(dam10k2529);
             } else if (
               llegadaCompetidor.edad >= 30 &&
               llegadaCompetidor.edad <= 34
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k3034);
+              dam10k3034.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k3034.length;
               calculosCompetidores(dam10k3034);
             } else if (
               llegadaCompetidor.edad >= 35 &&
               llegadaCompetidor.edad <= 39
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k3539);
+              dam10k3539.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k3539.length;
               calculosCompetidores(dam10k3539);
             } else if (
               llegadaCompetidor.edad >= 40 &&
               llegadaCompetidor.edad <= 44
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k4044);
+              dam10k4044.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k4044.length;
               calculosCompetidores(dam10k4044);
             } else if (
               llegadaCompetidor.edad >= 45 &&
               llegadaCompetidor.edad <= 49
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k4549);
+              dam10k4549.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k4549.length;
               calculosCompetidores(dam10k4549);
             } else if (
               llegadaCompetidor.edad >= 50 &&
               llegadaCompetidor.edad <= 54
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k5054);
+              dam10k5054.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k5054.length;
               calculosCompetidores(dam10k5054);
             } else if (
               llegadaCompetidor.edad >= 55 &&
               llegadaCompetidor.edad <= 59
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k5559);
+              dam10k5559.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k5559.length;
               calculosCompetidores(dam10k5559);
             } else if (
               llegadaCompetidor.edad >= 60 &&
               llegadaCompetidor.edad <= 64
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k6064);
+              dam10k6064.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k6064.length;
               calculosCompetidores(dam10k6064);
             } else if (
               llegadaCompetidor.edad >= 65 &&
               llegadaCompetidor.edad <= 69
             ) {
-              verificarDuplicados(dorsalCompetidor,dam10k6569);
+              dam10k6569.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10k6569.length;
               calculosCompetidores(dam10k6569);
             } else if (llegadaCompetidor.edad >= 70) {
-              verificarDuplicados(dorsalCompetidor,dam10km70);
+              dam10km70.push(llegadaCompetidor);
               llegadaCompetidor.posEdad = dam10km70.length;
               calculosCompetidores(dam10km70);
             }
           }
         }
-        break;
       }
+      
+      break;
     }
     if (!encontrado) {
       let llegadaCompetidor = {
         dorsal: dorsalCompetidor,
         tiempo: tiempoCompetidor,
       };
-
+    
       if (tiempoInicial === null) {
         // Establecer el tiempo inicial solo la primera vez
         tiempoInicial = {
@@ -676,13 +677,11 @@ document.addEventListener("DOMContentLoaded", function () {
           segundos: llegadaCompetidor.tiempoSegundos,
         };
       }
-
-      const controlExistenciaGeneral = general.findIndex(
-        (item) => item.dorsal === llegadaCompetidor.dorsal
-      );
+    
+      const controlExistenciaGeneral = general.findIndex(item => item.dorsal === llegadaCompetidor.dorsal);
       if (controlExistenciaGeneral === -1) {
         // La dorsal no existe en el array 'general', agregarla
-
+    
         // Calcular la diferencia de tiempo en segundos
         const tiempoInicialSegundos =
           tiempoInicial.hora * 3600 +
@@ -692,20 +691,20 @@ document.addEventListener("DOMContentLoaded", function () {
           tiempoCompetidor.hora * 3600 +
           tiempoCompetidor.minutos * 60 +
           tiempoCompetidor.segundos;
-
+    
         let diferenciaSegundos =
           tiempoCompetidorSegundos - tiempoInicialSegundos;
-
+    
         // Asegurarse de que la diferencia de tiempo sea positiva
         if (diferenciaSegundos < 0) {
           diferenciaSegundos += 24 * 3600; // Sumar un día en segundos (24 horas * 60 minutos * 60 segundos)
         }
-
+    
         // Convertir la diferencia de tiempo a formato hh:mm:ss
         const difHoras = Math.floor(diferenciaSegundos / 3600);
         const difMinutos = Math.floor((diferenciaSegundos % 3600) / 60);
         const difSegundos = diferenciaSegundos % 60;
-
+    
         llegadaCompetidor.tiempo = `${padZero(difHoras)}:${padZero(
           difMinutos
         )}:${padZero(difSegundos)}`;
@@ -714,17 +713,18 @@ document.addEventListener("DOMContentLoaded", function () {
             difSegundos
           )}`;
         }
-
+    
         llegadaCompetidor.tiempoHora = difHoras;
         llegadaCompetidor.tiempoMinutos = difMinutos;
         llegadaCompetidor.tiempoSegundos = difSegundos;
-
+    
         revision.push(llegadaCompetidor);
       }
+      
     }
+  
 
     console.clear();
-    console.log("dorsal competidor: ", dorsalCompetidor);
     console.log("ingresados: ", ingresos);
     console.log("general21K: ", general21k);
     console.log("caballeros21K: ", caballeros21k);
@@ -783,46 +783,12 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(dam10k6064);
     console.log(dam10k6569);
     console.log(dam10km70);
-    console.log("revision: ", revision);
-    console.log("duplicados: ", duplicados);
+    console.log("revision: ",revision);
+    console.log("duplicados: ",duplicados);
   }
 
   const competencia21k = "21.097";
   const competencia10k = "10.500";
-
-  // Función para verificar y mover los duplicados
-  function verificarDuplicados(dorsalCompetidor, array) {
-    // Verificar si el dorsal ya existe en el array ingresos
-    var indice = array.findIndex(function (llegadaCompetidor) {
-      return llegadaCompetidor.dorsal === dorsalCompetidor;
-    });
-
-    if (indice !== -1) {
-      // Verificar si el dorsal ya se encuentra en duplicados
-      var duplicadoExistente = duplicados.some(function (competidor) {
-        return competidor.dorsal === dorsalCompetidor;
-      });
-
-      if (!duplicadoExistente) {
-        // Obtener el competidor duplicado
-        var competidorDuplicado = array.splice(indice, 1)[0];
-
-        // Agregar el competidor duplicado y el competidor original a duplicados
-        duplicados.push(competidorDuplicado);
-        duplicados.push(llegadaCompetidor);
-      }
-    } else {
-      // Verificar si el dorsal ya está en duplicados
-      var duplicadoExistente = duplicados.some(function (competidor) {
-        return competidor.dorsal === dorsalCompetidor.dorsal;
-      });
-
-      // Agregar el nuevo competidor a array solo si no es un duplicado
-      if (!duplicadoExistente) {
-        array.push(llegadaCompetidor);
-      }
-    }
-  }
 
   function calculosCompetidores(competidores) {
     const tiempoInicialSegundos =
